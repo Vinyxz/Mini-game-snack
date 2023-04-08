@@ -1,0 +1,118 @@
+<HTML>
+<HEAD>
+
+</HEAD>
+
+<BODY BGCOLOR="orange">
+<p align="center"><font size="6" color="blue"><b>Adivinha o Numero
+
+<SCRIPT LANGUAGE="JavaScript">
+
+<!-- Begin
+
+function checkChoice(whichbox) {
+with (whichbox.form) {
+if (whichbox.checked == false)
+hiddentotal.value = eval(hiddentotal.value) - eval(whichbox.value);
+else
+hiddentotal.value = eval(hiddentotal.value) + eval(whichbox.value);
+return(formatCurrency(hiddentotal.value));
+   }
+}
+
+function formatCurrency(num) {
+
+num = num.toString().replace('');
+if(isNaN(num)) num = "0";
+cents = Math.floor((num*100+0.5)%100);
+num = Math.floor((num*100+0.5)/100).toString();
+if(cents < 10) cents = "0" + cents;
+for (var i = 0; i < Math.floor((num.length-(1+i))/3); i++)
+num = num.substring(0,num.length-(4*i+3))+','+num.substring(num.length-(4*i+3));
+return ( num );
+
+}
+
+//  End -->
+</script>
+
+</b></font>
+<SCRIPT LANGUAGE="JavaScript1.1">
+<!-- Begin
+function botonright() {
+if (navigator.appName == 'Netscape' && 
+(e.which == 3 || e.which == 2))
+return false;
+else if (navigator.appName == 'Microsoft Internet Explorer' && 
+(event.button == 2 || event.button == 3)) {
+ alert("Botao direito do mouse desativado.");
+return false;
+}
+return true;
+}
+document.onmousedown=botonright;
+if (document.layers) window.captureEvents(Event.MOUSEDOWN);
+window.onmousedown=botonright;
+//  End -->
+</script>
+
+<p align=center><font size="2">Pense em um numero de 1 a 100,<br>
+ clique nos quadradinhos correspondentes que tem o seu numero,<br>
+ e clique em "Resposta".</font><br>
+
+<center>
+<table>
+  <TR>
+    <TD> <form name=myform> <center><FONT color=blue>
+      <IMG src="1x.gif" alt="" border=0 height=140 width=232>&nbsp;&nbsp;
+      <IMG src="2x.gif" alt="" border=0 height=140 width=232>&nbsp;&nbsp;
+      <IMG src="3x.gif" alt="" border=0 height=140 width=232><br>
+      <input type=checkbox name=A value="1" onClick="this.form.total.value=checkChoice(this);">
+         &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+         &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp;
+      <input type=checkbox name=B value="2" onClick="this.form.total.value=checkChoice(this);">
+         &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+         &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp;
+      <input type=checkbox name=C value="4" onClick="this.form.total.value=checkChoice(this);">
+    <br>
+
+      <IMG src="4x.gif" alt="" border=0 height=140 width=232>&nbsp;&nbsp;
+      <IMG src="5x.gif" alt="" border=0 height=140 width=232>&nbsp;&nbsp;
+      <IMG src="6x.gif" alt="" border=0 height=140 width=232><br>
+       <input type=checkbox name=D value="8" onClick="this.form.total.value=checkChoice(this);">
+         &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+         &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp;
+       <input type=checkbox name=E value="16" onClick="this.form.total.value=checkChoice(this);">
+         &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+         &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp;
+       <input type=checkbox name=F value="32" onClick="this.form.total.value=checkChoice(this);"></center><br> <center>
+   <IMG src="7x.gif" alt="" border=0 height=140 width=235>       
+       <input type=checkbox name=G value="64" onClick="this.form.total.value=checkChoice(this);">
+         <input type="hidden" name="total" value=""> 
+         <input type=hidden name=hiddentotal value=0>
+ 
+   &nbsp;</center></font>
+        <p align="center"><FONT color=blue>
+ 
+        <input type="reset" value="  Limpar  " onClick=""> &nbsp; &nbsp; <input type="text" name="totanume" value="" size=6> &nbsp; &nbsp;
+         <input type="button" value="Resposta" OnClick="myform.totanume.value=myform.hiddentotal.value"><br><br>
+
+        </p>
+
+</form><center>
+
+<br>
+</center>
+</td></tr>
+</table>
+
+
+</CENTER>
+</BODY></HTML>
+
+
+
+
+
+
+
